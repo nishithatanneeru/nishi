@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.restaurant{
+    height: 200vh;
+    width: 100%;
+    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(33.jpg);
+    background-size: cover;
+    background-position: center;
+    image-orientation: center;
+}
+.navbar{
+    width: 105%;
+    display: inline-block;
+    margin: auto;
+    padding: 55px 0px;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+  font-size: 35px;
+  text-decoration: inherit;
+  color: #b29256;
+}
+.navbar ul{
+    list-style: circle;
+}
+.navbar ul li{
+    display: inline;
+    list-style: circle;
+    margin:0 10px;
+    position: relative;
+}
+.navbar ul li a{
+    text-decoration: solid;
+    color: blue;
+    width: 50%;
+    font-size: 20px;
+    text-align: center;
+}
+.navbar ul li ::after{
+    content: "";
+    height: 15px;
+    width: 0;
+    background-color: yellow;
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+.navbar ul li :hover::after{
+  width: 100%;
+}
+.food{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #658908;
+}
+.food h3{
+    font-size: 70px;
+    margin-top: 100px;
+}
+.food p{
+    font-weight: 300;
+    margin: 20px 0;
+    line-height: 25px;
+    color: red;
+}
+span{
+  background: #b29256;
+  height: 100%;
+  width: 0;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid black;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  button:hover span{
+    width: 100%;
+  }
+  button:hover{
+    border: none;
+    }
